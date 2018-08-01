@@ -34,7 +34,7 @@ import { CustomValidator } from './custom-validator';
         </div>
 
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit" [disabled]="!addFriendForm.valid">Submit</button>
         </div>
 
     </form>

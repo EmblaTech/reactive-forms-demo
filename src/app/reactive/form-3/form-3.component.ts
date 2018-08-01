@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
+import { CustomValidator } from './custom-validator';
+
 @Component({
-  selector: 'demo-form-2',
+  selector: 'demo-form-3',
   template: `
     <h1>Model-driven form example 2</h1>
 
@@ -11,10 +13,16 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
         <div>
             <label>Name</label>
             <input type="text" formControlName="name">
+            <small *ngIf="userFormItems.name.invalid && userFormItems.name.touched">Name is required</small>
         </div>
         <div>
             <label>Email</label>
             <input type="text" formControlName="email">
+            <span *ngIf="userFormItems.email.touched">
+              <small *ngIf="userFormItems.email.errors?.required">E-mail is required</small>
+              <small *ngIf="!userFormItems.email.errors?.required && userFormItems.email.errors?.email">Doesn't fit e-mail address format</small>
+            </span>
+
         </div>
         <div>
           <label>Age group</label>
@@ -29,9 +37,13 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 
     </form>
   `,
-  styles: []
+  styles: [`
+    input.ng-invalid.ng-touched {
+      border-color: red
+    }
+  `]
 })
-export class Form2Component implements OnInit {
+export class Form3Component implements OnInit {
   readonly AGE_GROUPS = [
     { name: 'Kid' },
     { name: 'Young adult' },
@@ -49,7 +61,7 @@ export class Form2Component implements OnInit {
 
   userFormItems = {
     name: new FormControl(this.user.name, [Validators.required]),
-    email: new FormControl(this.user.email, [Validators.required]),
+    email: new FormControl(this.user.email, [Validators.required, Validators.email]),
     ageGroup: new FormControl(this.user.ageGroup)
   };
 

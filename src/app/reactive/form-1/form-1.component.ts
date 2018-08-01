@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'demo-form-1',
   template: `
-    <h1>Model-driven form example</h1>
+    <h1>Model-driven form example 1</h1>
 
     <form [formGroup]="addFriendForm" (ngSubmit)="onSubmit()">
 

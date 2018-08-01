@@ -10,8 +10,10 @@ import { Component } from '@angular/core';
       <br>
       <a href="reactive/1">reactive/1</a>
       <br>
+      <a href="reactive/2">reactive/2</a>
+      <br>
     </div>
-    
+
     <router-outlet></router-outlet>
   `,
   styles: []

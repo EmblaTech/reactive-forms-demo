@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
-import { CustomValidator } from './custom-validator';
-
 @Component({
   selector: 'demo-form-3',
   template: `

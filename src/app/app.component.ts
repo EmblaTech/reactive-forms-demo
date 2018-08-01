@@ -16,6 +16,8 @@ import { Component } from '@angular/core';
       <br>
       <a href="reactive/4">reactive/4</a>
       <br>
+      <a href="reactive/5">reactive/5</a>
+      <br>
     </div>
 
     <router-outlet></router-outlet>

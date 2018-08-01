@@ -6,7 +6,7 @@ import { CustomValidator } from './custom-validator';
 @Component({
   selector: 'demo-form-3',
   template: `
-    <h1>Model-driven form example 2</h1>
+    <h1>Model-driven form example 5</h1>
 
     <form [formGroup]="addFriendForm" (ngSubmit)="send()">
 

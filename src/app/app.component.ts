@@ -5,8 +5,11 @@ import { Component } from '@angular/core';
   template: `
     <button (click)="toggleLinks()">nav</button>
 
-    <div>
-      <a href="template-1" *ngIf="isShowLinks">template-1</a>
+    <div *ngIf="isShowLinks">
+      <a href="template/1">template/1</a>
+      <br>
+      <a href="reactive/1">reactive/1</a>
+      <br>
     </div>
     
     <router-outlet></router-outlet>

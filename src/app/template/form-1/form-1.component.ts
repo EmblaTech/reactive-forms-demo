@@ -30,7 +30,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: []
 })
-export class Template1Component implements OnInit {
+export class Form1Component implements OnInit {
 
   readonly AGE_GROUPS = [
     { name: 'Kid' },

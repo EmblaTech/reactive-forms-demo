@@ -24,7 +24,7 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
         </div>
 
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit" [disabled]="!addFriendForm.valid">Submit</button>
         </div>
 
     </form>

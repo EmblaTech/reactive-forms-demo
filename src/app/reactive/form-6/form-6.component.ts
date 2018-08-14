@@ -90,7 +90,11 @@ export class Form6Component implements OnInit {
 
   reset = () => this.addFriendForm.reset();
 
-  resetToDefault = () => this.addFriendForm.setValue(this.user);
+  resetToDefault = () => this.addFriendForm.setValue({
+    name: 'Amarabandu Rupasingha',
+    email: 'user1@mail.com',
+    ageGroup: this.AGE_GROUPS[0]
+  })
 
   capitalizeName = () => this.addFriendForm.patchValue({ name: this.userFormItems.name.value.toString().toUpperCase() });
 }
